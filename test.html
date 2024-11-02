@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+form{
+border: 1px solid black;
+width: 400px;
+margin-left: 450px;
+height: 230px;
+text-align: center;
+
+;;
+}
+#weight{
+    width: 290px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 30px;
+    ;;
+}
+
+#height{
+    width: 290px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 30px;
+    ;;
+}
+#inputbtn{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(157, 255, 0);
+    border: none;
+    margin-left: 50px;
+
+}
+#result{
+    font-size: 20px;
+}
+
+</style>
+<body>
+ 
+    <h1>BMI CALCULATOR</h1>
+    <form id="bmiForm">
+        <br>
+        <input type="text" id="weight" required><br><br>
+
+     
+        <input type="text" id="height" ><br><br>
+
+        <input type="submit" value="calculator BMI" id="inputbtn">
+        <h2 id="result"></h2>
+    </form>
+
+  
+
+    <script>
+           
+            document.getElementById('bmiForm').onsubmit = function(event) {
+                event.preventDefault();  
+    
+               
+                var weight = parseFloat(document.getElementById('weight').value);
+                var height = parseFloat(document.getElementById('height').value);
+    
+               
+                var bmi = weight / (height * height);
+    
+              
+                document.getElementById('result').innerText = "your BMI is : " + bmi.toFixed(2);
+            };
+        </script>
+
+
+
+
+
+
+</body>
+</html>
